@@ -42,8 +42,7 @@
 
 - host 包 manifest 加 `dsh.bundle.patch` 指向仓库内 `cordis.patch.yml`（bundle 层声明，随包分发），`files` 白名单收进产物 + patch
 - **UI 包作为 host 包的 dependency**（如 `dependencies: { "dsh-xxx-ui": ">=0.1.0" }`），随 host 一起装，避免用户单独装 UI
-- 用户侧安装：`npx @deepseek-ai/dsh plugin --profile web add <host包名>`（内部走 `dsh.bundle.patch` 插入 bundle 行）
-- **用户侧更新**：`npx @deepseek-ai/dsh plugin --profile web update <host包名> <host包名>-ui`——`dsh plugin` 是 pnpm 转发，`update` 只更新显式列出的包；UI 包是 host 的 dependency，必须一起列才会更新
+- 用户侧安装：`npx @deepseek-ai/dsh plugin --profile web add <host包名>@latest <host包名>-ui@latest`（内部走 `dsh.bundle.patch` 插入 bundle 行）
 - `cordis.patch.yml` 里两行：host + UI 的 loader 行（id 去 `dsh-` 前缀）
 
 ## 排障三问（按顺序）
