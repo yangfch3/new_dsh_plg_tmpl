@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2024",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "types": ["node"],
+    "noEmit": true,
+    "paths": {
+      "@deepseek-ai/dsh-typert-protocol": ["./packages/vendor-typert-protocol/src/index.ts"],
+      "@deepseek-ai/dsh-typert-protocol/types": ["./packages/vendor-typert-protocol/src/types.ts"]
+    }
+  },
+  "include": [],
+  "references": [
+    { "path": "./packages/dsh-hello-plugin" },
+    { "path": "./packages/vendor-typert-protocol" }
+  ]
+}

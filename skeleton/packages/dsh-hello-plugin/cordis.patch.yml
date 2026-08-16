@@ -1,0 +1,8 @@
+# dsh-hello-plugin bundle layer: enables the host plugin and its settings tab.
+# Referenced by `dsh.bundle.patch` in package.json; shipped in the npm tarball.
+# Loader row ids follow the repo-wide convention: package name minus `dsh-`.
+- insert:
+    - id: hello-plugin
+      name: dsh-hello-plugin
+    - id: hello-plugin-ui
+      name: dsh-hello-plugin-ui

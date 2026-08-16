@@ -1,0 +1,15 @@
+# Node
+node_modules/
+
+# Build artifacts (tsc output + generated typert artifacts)
+lib/
+dist/
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# macOS
+.DS_Store
+
+# Logs / misc
+*.log
