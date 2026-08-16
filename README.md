@@ -1,11 +1,11 @@
-# .new_dsh_plg_tmpl — dsh 树外插件开发模板
+# new_dsh_plg_tmpl — dsh 树外插件开发模板
 
 复制本目录后交给 AI 开发新插件，可快速、少踩坑。沉淀自 dsh-mcp-mgr 实战（含一次完整踩坑→修复循环）。
 
 ## 结构
 
 ```
-.new_dsh_plg_tmpl/
+new_dsh_plg_tmpl/
 ├── skeleton/                     ← 可构建的最小插件骨架（复制即用）
 │   ├── tsconfig.host.json         workspace root marker + protocol paths
 │   ├── gen.mjs                    Typert 产物生成（自动发现 host 包）
@@ -23,7 +23,7 @@
 
 ## 使用步骤
 
-1. `cp -R .new_dsh_plg_tmpl/skeleton <新插件目录>`（或直接复制整个模板）
+1. `cp -R new_dsh_plg_tmpl/skeleton <新插件目录>`（或直接复制整个模板）
 2. 全局替换骨架占位名：`dsh-hello-plugin` → 你的包名、`hello` → 你的 Remote namespace、`Hello` → 类名
 3. `gen.mjs` 顶部替换 dsh checkout 绝对路径
 4. 按需增删包（不需要 UI 就删 `-ui` 包；不需要 Remote 就删 `./typert`/`./remote` 导出与 gateway）
