@@ -88,3 +88,9 @@ pnpm dsh --profile web --dump-config   # 预检组合（不启动）
 pnpm dsh web                   # 启动（patch/声明变更必须重启；bundle 变更刷新即可）
 node scripts/uninstall.mjs     # 回滚
 ```
+
+### 用户（非插件开发者）侧安装经验
+
+- dsh 使用 pnpm 有设置默认的 minimumReleaseAge，用途：防御供应链攻击的安全配置，用来限制安装刚发布不久的依赖包
+- 刚发布的插件新版本，用户侧使用 @latest 无法立即更新到（dsh 面前是 24h）
+- 可使用 `npx @deepseek-ai/dsh plugin --profile web add <pkg_name_1>@x.x.x <pkg_name_2>@x.x.x` 强行到指定版本
